@@ -1,7 +1,7 @@
 import clsx from "clsx";
 import { LucideCircleCheck, LucideFileText, LucidePencil } from "lucide-react";
 import Link from "next/link";
-import { Heading } from "@/components/Heading";
+import { Heading } from "@/components/heading";
 import {
   Card,
   CardContent,
