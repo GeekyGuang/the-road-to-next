@@ -7,7 +7,7 @@ import { TICKET_ICONS } from "@/features/ticket/constants";
 import { Ticket } from "@/features/ticket/types";
 import { ticketPath } from "@/paths";
 
-const TicketItem = ({ ticket }: { ticket: Ticket }) => {
+const TicketItem = ({ ticket, isDetail }: { ticket: Ticket, isDetail?: boolean }) => {
   const detailButton = (
     <Button variant="outline" size="icon" asChild>
       <Link href={ticketPath(ticket.id)}>
@@ -16,7 +16,10 @@ const TicketItem = ({ ticket }: { ticket: Ticket }) => {
     </Button>
   )
   return (
-    <div className="w-full max-w-[420px] flex-1 flex gap-x-1">
+    <div className={clsx("w-full flex-1 flex gap-x-1", {
+      "max-w-[420px]": !isDetail,
+      "max-w-[580px]": isDetail,
+    })}>
       <Card
         className="w-full"
       >
@@ -27,14 +30,16 @@ const TicketItem = ({ ticket }: { ticket: Ticket }) => {
           </CardTitle>
         </CardHeader>
         <CardContent>
-          <span className={clsx("line-clamp-3 whitespace-break-spaces", {
-            "line-through": ticket.status === "DONE",
+          <span className={clsx("whitespace-break-spaces", {
+            "line-clamp-3": !isDetail,
           })}>{ticket.content}</span>
         </CardContent>
       </Card>
-      <div className="flex flex-col gap-y-1">
-        {detailButton}
-      </div>
+      {!isDetail && (
+        <div className="flex flex-col gap-y-1">
+          {detailButton}
+        </div>
+      )}
     </div>
   )
 }
