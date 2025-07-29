@@ -10,7 +10,12 @@
     "lint-fix": "next lint --fix",
     "lint-config": "eslint eslint.config.mjs --fix",
     "prepare": "husky",
-    "type-check": "tsc --noEmit"
+    "type-check": "tsc --noEmit",
+    "postinstall": "prisma generate",
+    "format": "prettier --write . && prisma format",
+    "format:check": "prettier --check .",
+    "format:staged": "prettier --write",
+    "format:prisma": "prisma format"
   },
   "dependencies": {
     "@radix-ui/react-separator": "^1.1.7",
@@ -32,8 +37,11 @@
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "15.3.4",
+    "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-simple-import-sort": "^12.1.1",
     "husky": "^9.1.7",
+    "prettier": "^3.6.2",
+    "prisma": "^6.12.0",
     "tailwindcss": "^4",
     "tw-animate-css": "^1.3.5",
     "typescript": "^5"

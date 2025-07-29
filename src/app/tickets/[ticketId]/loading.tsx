@@ -5,5 +5,5 @@ export default function Loading() {
     <div className="flex-1 flex flex-col justify-center items-center">
       <Spinner />
     </div>
-  )
+  );
 }

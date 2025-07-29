@@ -3,4 +3,4 @@ export type Ticket = {
   title: string;
   content: string;
   status: "DONE" | "OPEN" | "IN_PROGRESS";
-}
+};

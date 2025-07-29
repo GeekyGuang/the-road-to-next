@@ -12,7 +12,7 @@ const TicketsPage = async () => {
         <TicketList />
       </Suspense>
     </div>
-  )
-}
+  );
+};
 
 export default TicketsPage;

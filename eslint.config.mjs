@@ -3,7 +3,6 @@ import simpleImportSort from "eslint-plugin-simple-import-sort";
 import { dirname } from "path";
 import { fileURLToPath } from "url";
 
-
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
@@ -27,6 +26,8 @@ const eslintConfig = [
       "simple-import-sort/exports": "error",
     },
   },
+  // 必须放在最后，用来关闭与 Prettier 冲突的规则
+  ...compat.extends("prettier"),
 ];
 
 export default eslintConfig;

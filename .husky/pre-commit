@@ -1,5 +1,8 @@
 set -e  # 遇到错误立即退出
 
+echo "🎨 Running formatter..."
+npm run format
+
 echo "🔍 Running linter..."
 npm run lint-fix
 

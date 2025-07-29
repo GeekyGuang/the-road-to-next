@@ -5,8 +5,8 @@ import { getTicket } from "@/features/ticket/queries/get-ticket";
 type TicketPageProps = {
   params: Promise<{
     ticketId: string;
-  }>
-}
+  }>;
+};
 
 const TicketPage = async ({ params }: TicketPageProps) => {
   const { ticketId } = await params;
@@ -19,7 +19,7 @@ const TicketPage = async ({ params }: TicketPageProps) => {
     <div className="flex justify-center">
       <TicketItem ticket={ticket} isDetail />
     </div>
-  )
-}
+  );
+};
 
 export default TicketPage;

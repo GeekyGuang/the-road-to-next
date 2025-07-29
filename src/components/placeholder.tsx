@@ -5,7 +5,7 @@ type PlaceholderProps = {
   label: string;
   icon?: React.ReactElement<{ className?: string }>;
   button?: React.ReactElement<{ className?: string }>;
-}
+};
 
 export const Placeholder = ({
   label,
@@ -18,5 +18,5 @@ export const Placeholder = ({
       <h3 className="text-lg text-center">{label}</h3>
       {cloneElement(button, { className: "h-10" })}
     </div>
-  )
-}
+  );
+};

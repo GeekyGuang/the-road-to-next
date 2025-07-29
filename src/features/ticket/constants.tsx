@@ -4,4 +4,4 @@ export const TICKET_ICONS = {
   DONE: <LucideCircleCheck />,
   OPEN: <LucideFileText />,
   IN_PROGRESS: <LucidePencil />,
-}
+};
