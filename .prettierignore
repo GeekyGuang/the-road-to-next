@@ -13,3 +13,4 @@ package-lock.json
 .env.production.local
 # Prisma files are formatted by Prisma extension
 *.prisma
+components/ui
