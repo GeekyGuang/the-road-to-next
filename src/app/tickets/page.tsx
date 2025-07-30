@@ -6,7 +6,10 @@ import { TicketList } from "@/features/ticket/components/ticket-list";
 const TicketsPage = async () => {
   return (
     <div className="flex-1 flex flex-col gap-y-8">
-      <Heading title="TicketsPage" description="All your tickets at one place" />
+      <Heading
+        title="TicketsPage"
+        description="All your tickets at one place"
+      />
 
       <Suspense fallback={<Spinner />}>
         <TicketList />

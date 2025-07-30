@@ -1,4 +1,5 @@
 import { FlatCompat } from "@eslint/eslintrc";
+import prettier from "eslint-plugin-prettier";
 import simpleImportSort from "eslint-plugin-simple-import-sort";
 import { dirname } from "path";
 import { fileURLToPath } from "url";
@@ -15,6 +16,7 @@ const eslintConfig = [
   {
     plugins: {
       "simple-import-sort": simpleImportSort,
+      prettier,
     },
     rules: {
       "simple-import-sort/imports": [
@@ -24,6 +26,7 @@ const eslintConfig = [
         },
       ],
       "simple-import-sort/exports": "error",
+      "prettier/prettier": "error",
     },
   },
   // 必须放在最后，用来关闭与 Prettier 冲突的规则

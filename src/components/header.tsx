@@ -20,7 +20,10 @@ export const Header = () => {
       </Link>
       <div className="flex items-center gap-x-2">
         <ThemeSwitcher />
-        <Link href={ticketsPath()} className={buttonVariants({ variant: "default" })}>
+        <Link
+          href={ticketsPath()}
+          className={buttonVariants({ variant: "default" })}
+        >
           Tickets
         </Link>
       </div>

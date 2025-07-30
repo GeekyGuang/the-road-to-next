@@ -7,7 +7,13 @@ import { TICKET_ICONS } from "@/features/ticket/constants";
 import { Ticket } from "@/features/ticket/types";
 import { ticketPath } from "@/paths";
 
-const TicketItem = ({ ticket, isDetail }: { ticket: Ticket; isDetail?: boolean }) => {
+const TicketItem = ({
+  ticket,
+  isDetail,
+}: {
+  ticket: Ticket;
+  isDetail?: boolean;
+}) => {
   const detailButton = (
     <Button variant="outline" size="icon" asChild>
       <Link href={ticketPath(ticket.id)}>
