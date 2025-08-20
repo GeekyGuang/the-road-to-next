@@ -3,7 +3,11 @@ import { CardCompact } from "@/components/card-compact";
 import { TicketUpsertForm } from "@/features/ticket/components/ticket-upsert-form";
 import { getTicket } from "@/features/ticket/queries/get-ticket";
 
-const TicketEditPage = async ({ params }: { params: { ticketId: string } }) => {
+const TicketEditPage = async ({
+  params,
+}: {
+  params: Promise<{ ticketId: string }>;
+}) => {
   const { ticketId } = await params;
   const ticket = await getTicket(ticketId);
 

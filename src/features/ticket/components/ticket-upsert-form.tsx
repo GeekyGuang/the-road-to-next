@@ -1,5 +1,7 @@
+"use client";
+
 import { Ticket } from "@prisma/client";
-import { Button } from "@/components/ui/button";
+import { SubmitButton } from "@/components/form/submit-button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
@@ -17,7 +19,7 @@ const TicketUpsertForm = ({ ticket }: { ticket?: Ticket }) => {
       <Label htmlFor="content">Content</Label>
       <Textarea id="content" name="content" defaultValue={ticket?.content} />
 
-      <Button type="submit">{ticket ? "Update" : "Create"}</Button>
+      <SubmitButton label={ticket ? "Update" : "Create"} />
     </form>
   );
 };
